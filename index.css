@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+}
+
+main {
+    border: 1px solid #c8c8c8;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.ui.cards {
+    justify-content: flex-start;
+}
+
+.ui.cards>.card {
+    margin-right: 5% !important;
+}
