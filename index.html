@@ -2,20 +2,27 @@
 <head>
     <meta charset='UTF-8'>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+        crossorigin="anonymous"
+    />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     <title>My Book</title>
 </head>
 <body>
-    <header class="ui inverted menu">
-        <a class="active item">
-            Домой
-        </a>
-        <a class="item">
-            Фильтр по жанрам и темам
-        </a>
-    </header>
-    <main>
-        <div class="ui cards dark">
+<header class="ui inverted menu">
+    <a class="active item">
+        Домой
+    </a>
+    <a class="item">
+        Фильтр по жанрам и темам
+    </a>
+</header>
+<main>
+    <div class="ui cards dark">
         <div class="card dark">
             <div class="image">
                 <img src="images/BeginningRails6.png" alt="Beginning Rails 6" width="730" height="1050">
@@ -34,13 +41,15 @@
                 <span class="right floated">Добавлена: 02.12.2020</span>
             </div>
             <div class="extra content">
-                <a class="ui centered yellow button" href="books/Beginning_Rails_6_From_Novice_to_Professional_by_Brady_Somerville.pdf" target="_blank">Открыть</a>
+                <a class="ui centered yellow button"
+                   href="books/Beginning_Rails_6_From_Novice_to_Professional_by_Brady_Somerville.pdf" target="_blank">Открыть</a>
             </div>
         </div>
 
         <div class="card dark">
             <div class="image">
-                <img src="images/Ruby-on-Rails-For-Beginners.png" alt="Ruby on Rails for Beginners" width="730" height="1050">
+                <img src="images/Ruby-on-Rails-For-Beginners.png" alt="Ruby on Rails for Beginners" width="730"
+                     height="1050">
             </div>
             <div class="content">
                 <div class="header">Название</div>
@@ -56,7 +65,8 @@
                 <span class="right floated">Добавлена: 02.12.2020</span>
             </div>
             <div class="extra content">
-                <a class="ui centered red button" href="books/M_Hurtle_Ruby_on_Rails_for_beginners-2017.pdf" target="_blank">Открыть</a>
+                <a class="ui centered red button" href="books/M_Hurtle_Ruby_on_Rails_for_beginners-2017.pdf"
+                   target="_blank">Открыть</a>
             </div>
         </div>
 
@@ -78,14 +88,151 @@
                 <span class="right floated">Добавлена: 02.12.2020</span>
             </div>
             <div class="extra content">
-                <a class="ui centered black button" href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
+                <a class="ui centered black button"
+                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
             </div>
         </div>
 
+        <div class="card dark">
+            <div class="image" style="height: 417px">
+                <model-viewer
+                        style="height: 100%"
+                        src="3dModels/astronaut.glb"
+                        alt="A 3D model of an astronaut"
+                        auto-rotate camera-controls>
+                </model-viewer>
+            </div>
+            <div class="content">
+                <div class="header">Название</div>
+                <div class="description">Astronaut</div>
+            </div>
+            <div class="content">
+                <div class="header">Выбрать цвет</div>
+                <div class="description">Оригинал</div>
+            </div>
+            <div class="content">
+                <div class="header">Авторы</div>
+                <div class="meta">Alex Banks & Eve Porcello</div>
+                <span class="right floated">Добавлена: 02.12.2020</span>
+            </div>
+            <div class="extra content">
+                <a class="ui centered black button"
+                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
+            </div>
+        </div>
+        <div class="card dark">
+            <div class="image" style="height: 417px">
+                <model-viewer
+                        style="height: 100%"
+                        src="3dModels/astronaut.glb"
+                        alt="A 3D model of an astronaut"
+                        auto-rotate camera-controls>
+                </model-viewer>
+            </div>
+            <div class="content">
+                <div class="header">Название</div>
+                <div class="description">Astronaut</div>
+            </div>
+            <div class="content">
+                <div class="header">Выбрать цвет</div>
+                <div class="description">Оригинал</div>
+            </div>
+            <div class="content">
+                <div class="header">Авторы</div>
+                <div class="meta">Alex Banks & Eve Porcello</div>
+                <span class="right floated">Добавлена: 02.12.2020</span>
+            </div>
+            <div class="extra content">
+                <a class="ui centered black button"
+                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
+            </div>
+        </div>
+        <div class="card dark">
+            <div class="image" style="height: 417px">
+                <model-viewer
+                        style="height: 100%"
+                        src="3dModels/astronaut.glb"
+                        alt="A 3D model of an astronaut"
+                        auto-rotate camera-controls>
+                </model-viewer>
+            </div>
+            <div class="content">
+                <div class="header">Название</div>
+                <div class="description">Astronaut</div>
+            </div>
+            <div class="content">
+                <div class="header">Выбрать цвет</div>
+                <div class="description">Оригинал</div>
+            </div>
+            <div class="content">
+                <div class="header">Авторы</div>
+                <div class="meta">Alex Banks & Eve Porcello</div>
+                <span class="right floated">Добавлена: 02.12.2020</span>
+            </div>
+            <div class="extra content">
+                <a class="ui centered black button"
+                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
+            </div>
+        </div>
+        <div class="card dark">
+            <div class="image" style="height: 417px">
+                <model-viewer
+                        style="height: 100%"
+                        src="3dModels/astronaut.glb"
+                        alt="A 3D model of an astronaut"
+                        auto-rotate camera-controls>
+                </model-viewer>
+            </div>
+            <div class="content">
+                <div class="header">Название</div>
+                <div class="description">Astronaut</div>
+            </div>
+            <div class="content">
+                <div class="header">Выбрать цвет</div>
+                <div class="description">Оригинал</div>
+            </div>
+            <div class="content">
+                <div class="header">Авторы</div>
+                <div class="meta">Alex Banks & Eve Porcello</div>
+                <span class="right floated">Добавлена: 02.12.2020</span>
+            </div>
+            <div class="extra content">
+                <a class="ui centered black button"
+                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
+            </div>
+        </div>
+        <div class="card dark">
+            <div class="image" style="height: 417px">
+                <model-viewer
+                        style="height: 100%"
+                        src="3dModels/astronaut.glb"
+                        alt="A 3D model of an astronaut"
+                        auto-rotate camera-controls>
+                </model-viewer>
+            </div>
+            <div class="content">
+                <div class="header">Название</div>
+                <div class="description">Astronaut</div>
+            </div>
+            <div class="content">
+                <div class="header">Выбрать цвет</div>
+                <div class="description">Оригинал</div>
+            </div>
+            <div class="content">
+                <div class="header">Авторы</div>
+                <div class="meta">Alex Banks & Eve Porcello</div>
+                <span class="right floated">Добавлена: 02.12.2020</span>
+            </div>
+            <div class="extra content">
+                <a class="ui centered black button"
+                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
+            </div>
+        </div>
     </div>
-    </main>
-    <footer>
-    </footer>
+</main>
+
+<footer>
+</footer>
 </body>
 <script type='text/babel' src="index.js"></script>
 </html>
