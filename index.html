@@ -3,236 +3,411 @@
     <meta charset='UTF-8'>
     <link rel="stylesheet" href="index.css">
     <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
-        integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
-        crossorigin="anonymous"
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+            integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+            crossorigin="anonymous"
     />
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     <title>My Book</title>
 </head>
+
+//semantic ui range
+<style>
+    .ui.range {
+        width: 100%;
+        height: 20px;
+    }
+
+    .ui.range .inner {
+        margin: 0 10px 0 10px;
+        height: 20px;
+        position: relative;
+    }
+
+    .ui.range .inner:hover {
+        cursor: pointer;
+    }
+
+    .ui.range .inner .track {
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        top: 9px;
+        left: 0;
+        background-color: rgba(0, 0, 0, .05);
+    }
+
+    .ui.inverted.range .inner .track {
+        background-color: rgba(255, 255, 255, .08);
+    }
+
+    .ui.range .inner .track-fill {
+        position: absolute;
+        width: 0;
+        height: 4px;
+        border-radius: 4px;
+        top: 9px;
+        left: 0;
+        background-color: #1b1c1d;
+    }
+
+    .ui.inverted.range .inner .track-fill {
+        background-color: #545454;
+    }
+
+    .ui.range .inner .thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background: #fff linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+        background: #fff -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+        background: #fff -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+        background: #fff -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+        border-radius: 100%;
+        box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15), 0 0 0 1px rgba(34, 36, 38, .15) inset;
+    }
+
+    /*--------------
+         Colors
+    ---------------*/
+
+    /* Red */
+    .ui.red.range .inner .track-fill {
+        background-color: #DB2828;
+    }
+
+    .ui.red.inverted.range .inner .track-fill {
+        background-color: #FF695E;
+    }
+
+    /* Orange */
+    .ui.orange.range .inner .track-fill {
+        background-color: #F2711C;
+    }
+
+    .ui.orange.inverted.range .inner .track-fill {
+        background-color: #FF851B;
+    }
+
+    /* Yellow */
+    .ui.yellow.range .inner .track-fill {
+        background-color: #FBBD08;
+    }
+
+    .ui.yellow.inverted.range .inner .track-fill {
+        background-color: #FFE21F;
+    }
+
+    /* Olive */
+    .ui.olive.range .inner .track-fill {
+        background-color: #B5CC18;
+    }
+
+    .ui.olive.inverted.range .inner .track-fill {
+        background-color: #D9E778;
+    }
+
+    /* Green */
+    .ui.green.range .inner .track-fill {
+        background-color: #21BA45;
+    }
+
+    .ui.green.inverted.range .inner .track-fill {
+        background-color: #2ECC40;
+    }
+
+    /* Teal */
+    .ui.teal.range .inner .track-fill {
+        background-color: #00B5AD;
+    }
+
+    .ui.teal.inverted.range .inner .track-fill {
+        background-color: #6DFFFF;
+    }
+
+    /* Blue */
+    .ui.blue.range .inner .track-fill {
+        background-color: #2185D0;
+    }
+
+    .ui.blue.inverted.range .inner .track-fill {
+        background-color: #54C8FF;
+    }
+
+    /* Violet */
+    .ui.violet.range .inner .track-fill {
+        background-color: #6435C9;
+    }
+
+    .ui.violet.inverted.range .inner .track-fill {
+        background-color: #A291FB;
+    }
+
+    /* Purple */
+    .ui.purple.range .inner .track-fill {
+        background-color: #A333C8;
+    }
+
+    .ui.purple.inverted.range .inner .track-fill {
+        background-color: #DC73FF;
+    }
+
+    /* Pink */
+    .ui.pink.range .inner .track-fill {
+        background-color: #E03997;
+    }
+
+    .ui.pink.inverted.range .inner .track-fill {
+        background-color: #FF8EDF;
+    }
+
+    /* Brown */
+    .ui.brown.range .inner .track-fill {
+        background-color: #A5673F;
+    }
+
+    .ui.brown.inverted.range .inner .track-fill {
+        background-color: #D67C1C;
+    }
+
+    /* Grey */
+    .ui.grey.range .inner .track-fill {
+        background-color: #767676;
+    }
+
+    .ui.grey.inverted.range .inner .track-fill {
+        background-color: #DCDDDE;
+    }
+
+    /* Black */
+    .ui.black.range .inner .track-fill {
+        background-color: #1b1c1d;
+    }
+
+    .ui.black.inverted.range .inner .track-fill {
+        background-color: #545454;
+    }
+
+    /*--------------
+        Disabled
+    ---------------*/
+    .ui.range.disabled {
+        opacity: .5;
+    }
+
+    .ui.range.disabled .inner:hover {
+        cursor: auto;
+    }
+
+    .ui.range.disabled .inner .track-fill {
+        background: #ccc;
+    }
+</style>
+
+<style>
+
+    model-viewer#reveal {
+        --poster-color: #1C2E42;
+        --progress-bar-color: #fff;
+    }
+
+    .model-button {
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+        border: none;
+        background-color: limegreen;
+        box-sizing: border-box;
+        cursor: pointer;
+        padding: 0 0 -15px 0;
+    }
+
+    .model-button:hover {
+        background-color: mediumspringgreen;
+    }
+
+    .model-button:focus {
+        background-color: ghostwhite;
+    }
+
+    [data-tooltip]:after {
+        font-size: 0.9rem;
+    }
+
+    :not(:defined) > * {
+        display: none;
+    }
+</style>
+
 <body>
 <header class="ui inverted menu">
     <a class="active item">
         Домой
     </a>
-    <a class="item">
-        Фильтр по жанрам и темам
+    <a class="item" id="add-model">
+        Добавить модель
     </a>
 </header>
 <main>
     <div class="ui cards dark">
-        <div class="card dark">
-            <div class="image">
-                <img src="images/BeginningRails6.png" alt="Beginning Rails 6" width="730" height="1050">
-            </div>
-            <div class="content">
-                <div class="header">Название</div>
-                <div class="description">Beginning Rails 6</div>
-            </div>
-            <div class="content">
-                <div class="header">Язык</div>
-                <div class="description">English</div>
-            </div>
-            <div class="content">
-                <div class="header">Авторы</div>
-                <div class="meta">Brady Somerville, Adam Gamble, Cloves Carneiro Jr, Rida Al Barazi</div>
-                <span class="right floated">Добавлена: 02.12.2020</span>
-            </div>
-            <div class="extra content">
-                <a class="ui centered yellow button"
-                   href="books/Beginning_Rails_6_From_Novice_to_Professional_by_Brady_Somerville.pdf" target="_blank">Открыть</a>
-            </div>
-        </div>
+        <!--        <div class="card dark">-->
+        <!--            <div class="image">-->
+        <!--                <img src="images/BeginningRails6.png" alt="Beginning Rails 6" width="730" height="1050">-->
+        <!--            </div>-->
+        <!--            <div class="content">-->
+        <!--                <div class="header">Название</div>-->
+        <!--                <div class="description">Beginning Rails 6</div>-->
+        <!--            </div>-->
+        <!--            <div class="content">-->
+        <!--                <div class="header">Язык</div>-->
+        <!--                <div class="description">English</div>-->
+        <!--            </div>-->
+        <!--            <div class="content">-->
+        <!--                <div class="header">Авторы</div>-->
+        <!--                <div class="meta">Brady Somerville, Adam Gamble, Cloves Carneiro Jr, Rida Al Barazi</div>-->
+        <!--                <span class="right floated">Добавлена: 02.12.2020</span>-->
+        <!--            </div>-->
+        <!--            <div class="extra content">-->
+        <!--                <a class="ui centered yellow button"-->
+        <!--                   href="books/Beginning_Rails_6_From_Novice_to_Professional_by_Brady_Somerville.pdf" target="_blank">Открыть</a>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <!--        <div class="card dark">-->
+        <!--            <div class="image">-->
+        <!--                <img src="images/Ruby-on-Rails-For-Beginners.png" alt="Ruby on Rails for Beginners" width="730"-->
+        <!--                     height="1050">-->
+        <!--            </div>-->
+        <!--            <div class="content">-->
+        <!--                <div class="header">Название</div>-->
+        <!--                <div class="description">Ruby on Rails for Beginners</div>-->
+        <!--            </div>-->
+        <!--            <div class="content">-->
+        <!--                <div class="header">Язык</div>-->
+        <!--                <div class="description">Русский</div>-->
+        <!--            </div>-->
+        <!--            <div class="content">-->
+        <!--                <div class="header">Авторы</div>-->
+        <!--                <div class="meta">Майкл Хартл</div>-->
+        <!--                <span class="right floated">Добавлена: 02.12.2020</span>-->
+        <!--            </div>-->
+        <!--            <div class="extra content">-->
+        <!--                <a class="ui centered red button" href="books/M_Hurtle_Ruby_on_Rails_for_beginners-2017.pdf"-->
+        <!--                   target="_blank">Открыть</a>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <!--        <div class="card dark">-->
+        <!--            <div class="image">-->
+        <!--                <img src="images/LearningReact.png" alt="Learn React" width="730" height="1050">-->
+        <!--            </div>-->
+        <!--            <div class="content">-->
+        <!--                <div class="header">Название</div>-->
+        <!--                <div class="description">Learn React</div>-->
+        <!--            </div>-->
+        <!--            <div class="content">-->
+        <!--                <div class="header">Язык</div>-->
+        <!--                <div class="description">Русский</div>-->
+        <!--            </div>-->
+        <!--            <div class="content">-->
+        <!--                <div class="header">Авторы</div>-->
+        <!--                <div class="meta">Alex Banks & Eve Porcello</div>-->
+        <!--                <span class="right floated">Добавлена: 02.12.2020</span>-->
+        <!--            </div>-->
+        <!--            <div class="extra content">-->
+        <!--                <a class="ui centered black button"-->
+        <!--                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
         <div class="card dark">
-            <div class="image">
-                <img src="images/Ruby-on-Rails-For-Beginners.png" alt="Ruby on Rails for Beginners" width="730"
-                     height="1050">
+            <div class="image" style="height: 417px">
+                <!--                skybox-image="images/spruit_sunrise_1k_HDR.hdr"-->
+                <model-viewer
+                        id="reveal"
+                        ar ar-modes="webxr"
+                        camera-controls
+                        camera-orbit="-25deg 95deg"
+                        style="height: 100%; width: auto; background-color: #1C2E42"
+                        src="3dModels/tna.glb"
+                        alt="A 3D model of an antenne"
+                        poster="3dModels/tnaLoadingPoster.svg"
+                >
+                </model-viewer>
             </div>
             <div class="content">
                 <div class="header">Название</div>
-                <div class="description">Ruby on Rails for Beginners</div>
+                <div class="description">Antenne</div>
             </div>
             <div class="content">
-                <div class="header">Язык</div>
-                <div class="description">Русский</div>
+                <div class="header">Состояние</div>
+                <div class="description">Стабильное</div>
             </div>
             <div class="content">
-                <div class="header">Авторы</div>
-                <div class="meta">Майкл Хартл</div>
-                <span class="right floated">Добавлена: 02.12.2020</span>
+                <div class="header">Выбрать цвет</div>
+                <div class="description">
+                    <select class="ui dropdown">
+                        <option value="">Color</option>
+                        <option value="1,0,0,1">Red</option>
+                        <option value="0,1,0,1">Green</option>
+                        <option value="0.22,0.22,0.22,0.22">Default</option>
+                    </select>
+                </div>
             </div>
-            <div class="extra content">
-                <a class="ui centered red button" href="books/M_Hurtle_Ruby_on_Rails_for_beginners-2017.pdf"
-                   target="_blank">Открыть</a>
+            <div class="content">
+                <div class="header">
+                    Расположение кнопки
+                </div>
+                <b id="button-name">Выберите кнопку</b>
+                <br>
+                <br>
+                <div class="description">
+                    <p>
+                        <span>Ось Х:</span>
+                        <b id="x-coordinate">координаты по икс</b>
+                    </p>
+                    <div class="ui range" id="range-x"></div>
+                    <p>
+                        <span>Ось Y:</span>
+                        <b id="y-coordinate">координаты по игрек</b>
+                    </p>
+                    <div class="ui range" id="range-y"></div>
+
+                    <p>
+                        <span>Ось Z:</span>
+                        <b id="z-coordinate">координаты по зэт</b>
+                    </p>
+                    <div class="ui range" id="range-z"></div>
+                </div>
             </div>
+            <button id="apply-changes" class="ui black button" data-current-button>Подтвердить изменения</button>
         </div>
 
-        <div class="card dark">
-            <div class="image">
-                <img src="images/LearningReact.png" alt="Learn React" width="730" height="1050">
-            </div>
-            <div class="content">
-                <div class="header">Название</div>
-                <div class="description">Learn React</div>
-            </div>
-            <div class="content">
-                <div class="header">Язык</div>
-                <div class="description">Русский</div>
-            </div>
-            <div class="content">
-                <div class="header">Авторы</div>
-                <div class="meta">Alex Banks & Eve Porcello</div>
-                <span class="right floated">Добавлена: 02.12.2020</span>
-            </div>
-            <div class="extra content">
-                <a class="ui centered black button"
-                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
-            </div>
-        </div>
-
-        <div class="card dark">
-            <div class="image" style="height: 417px">
-                <model-viewer
-                        style="height: 100%"
-                        src="3dModels/astronaut.glb"
-                        alt="A 3D model of an astronaut"
-                        auto-rotate camera-controls>
-                </model-viewer>
-            </div>
-            <div class="content">
-                <div class="header">Название</div>
-                <div class="description">Astronaut</div>
-            </div>
-            <div class="content">
-                <div class="header">Выбрать цвет</div>
-                <div class="description">Оригинал</div>
-            </div>
-            <div class="content">
-                <div class="header">Авторы</div>
-                <div class="meta">Alex Banks & Eve Porcello</div>
-                <span class="right floated">Добавлена: 02.12.2020</span>
-            </div>
-            <div class="extra content">
-                <a class="ui centered black button"
-                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
-            </div>
-        </div>
-        <div class="card dark">
-            <div class="image" style="height: 417px">
-                <model-viewer
-                        style="height: 100%"
-                        src="3dModels/astronaut.glb"
-                        alt="A 3D model of an astronaut"
-                        auto-rotate camera-controls>
-                </model-viewer>
-            </div>
-            <div class="content">
-                <div class="header">Название</div>
-                <div class="description">Astronaut</div>
-            </div>
-            <div class="content">
-                <div class="header">Выбрать цвет</div>
-                <div class="description">Оригинал</div>
-            </div>
-            <div class="content">
-                <div class="header">Авторы</div>
-                <div class="meta">Alex Banks & Eve Porcello</div>
-                <span class="right floated">Добавлена: 02.12.2020</span>
-            </div>
-            <div class="extra content">
-                <a class="ui centered black button"
-                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
-            </div>
-        </div>
-        <div class="card dark">
-            <div class="image" style="height: 417px">
-                <model-viewer
-                        style="height: 100%"
-                        src="3dModels/astronaut.glb"
-                        alt="A 3D model of an astronaut"
-                        auto-rotate camera-controls>
-                </model-viewer>
-            </div>
-            <div class="content">
-                <div class="header">Название</div>
-                <div class="description">Astronaut</div>
-            </div>
-            <div class="content">
-                <div class="header">Выбрать цвет</div>
-                <div class="description">Оригинал</div>
-            </div>
-            <div class="content">
-                <div class="header">Авторы</div>
-                <div class="meta">Alex Banks & Eve Porcello</div>
-                <span class="right floated">Добавлена: 02.12.2020</span>
-            </div>
-            <div class="extra content">
-                <a class="ui centered black button"
-                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
-            </div>
-        </div>
-        <div class="card dark">
-            <div class="image" style="height: 417px">
-                <model-viewer
-                        style="height: 100%"
-                        src="3dModels/astronaut.glb"
-                        alt="A 3D model of an astronaut"
-                        auto-rotate camera-controls>
-                </model-viewer>
-            </div>
-            <div class="content">
-                <div class="header">Название</div>
-                <div class="description">Astronaut</div>
-            </div>
-            <div class="content">
-                <div class="header">Выбрать цвет</div>
-                <div class="description">Оригинал</div>
-            </div>
-            <div class="content">
-                <div class="header">Авторы</div>
-                <div class="meta">Alex Banks & Eve Porcello</div>
-                <span class="right floated">Добавлена: 02.12.2020</span>
-            </div>
-            <div class="extra content">
-                <a class="ui centered black button"
-                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
-            </div>
-        </div>
-        <div class="card dark">
-            <div class="image" style="height: 417px">
-                <model-viewer
-                        style="height: 100%"
-                        src="3dModels/astronaut.glb"
-                        alt="A 3D model of an astronaut"
-                        auto-rotate camera-controls>
-                </model-viewer>
-            </div>
-            <div class="content">
-                <div class="header">Название</div>
-                <div class="description">Astronaut</div>
-            </div>
-            <div class="content">
-                <div class="header">Выбрать цвет</div>
-                <div class="description">Оригинал</div>
-            </div>
-            <div class="content">
-                <div class="header">Авторы</div>
-                <div class="meta">Alex Banks & Eve Porcello</div>
-                <span class="right floated">Добавлена: 02.12.2020</span>
-            </div>
-            <div class="extra content">
-                <a class="ui centered black button"
-                   href="books/Learning_React_Modern_Patterns_for_Developing_React_Apps_by_Alex.pdf" target="_blank">Открыть</a>
-            </div>
-        </div>
     </div>
 </main>
 
 <footer>
 </footer>
 </body>
-<script type='text/babel' src="index.js"></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"
+>
+</script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+        integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+        crossorigin="anonymous"
+>
+</script>
+<script src="index.js"></script>
+<script src="semanticUI-range.js"></script>
 </html>

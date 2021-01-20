@@ -20,9 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51e7c1da-5cd1-4df2-b28b-2ac470d2c4b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/3dModels/astronaut.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3dModels/SheenChair.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3dModels/tna.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/sky.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/sky.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/spruit_sunrise_1k_HDR.hdr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/myBooks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myBooks.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +40,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -45,27 +54,36 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../works-education/server" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\IliaPastushkov\Documents\GitHub\myBooks\3dModels" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\IliaPastushkov\Documents\GitHub\myBooks\3dModels" />
       <recent name="C:\Users\IliaPastushkov\Documents\GitHub\myBooks" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\IliaPastushkov\Documents\GitHub\myBooks\images" />
+      <recent name="C:\Users\IliaPastushkov\Documents\GitHub\myBooks\3dModels" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/myBooks/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/myBooks/test.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.test.html" />
       </list>
     </recent_temporary>
   </component>
@@ -80,7 +98,12 @@
       <workItem from="1606924220881" duration="1325000" />
       <workItem from="1606925647319" duration="380000" />
       <workItem from="1607094654601" duration="3267000" />
-      <workItem from="1607593319100" duration="3378000" />
+      <workItem from="1607593319100" duration="18410000" />
+      <workItem from="1607936235539" duration="31046000" />
+      <workItem from="1610366100486" duration="11693000" />
+      <workItem from="1610712152921" duration="10407000" />
+      <workItem from="1610958586290" duration="17494000" />
+      <workItem from="1611131592373" duration="608000" />
     </task>
     <servers />
   </component>
@@ -98,5 +121,27 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="930" y="527" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608036368559">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="930" y="527" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1608036368559" />
+    <state x="1023" y="535" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1608031121034">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1023" y="535" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1608031121034" />
+    <state x="809" y="458" key="FileChooserDialogImpl" timestamp="1611064880101">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="809" y="458" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1611064880101" />
+    <state x="631" y="235" width="998" height="831" key="SettingsEditor" timestamp="1608035645972">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="631" y="235" width="998" height="831" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1608035645972" />
+    <state x="652" y="745" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607694106599">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="652" y="745" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1607694106599" />
   </component>
 </project>

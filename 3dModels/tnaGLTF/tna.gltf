@@ -1,0 +1,91 @@
+{
+  "asset": {
+    "generator": "Microsoft GLTF Exporter 2.8.3.32",
+    "version": "2.0"
+  },
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 22824,
+      "type": "VEC3",
+      "max": [
+        8.54079818725586,
+        20.723739624023438,
+        10.760740280151367
+      ],
+      "min": [
+        -7.417448997497559,
+        -9.576512643006171e-24,
+        -5.108891010284424
+      ]
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 273888,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "tna_data.bin",
+      "byteLength": 273888
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {},
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            0.2195197343826294,
+            0.2195197343826294,
+            0.2195197343826294,
+            1
+          ],
+          "specularFactor": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0
+          },
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Asset3DLoader.sceneRoot"
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "scene": 0,
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ]
+}
